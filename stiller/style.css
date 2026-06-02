@@ -1,0 +1,233 @@
+/* Genel Ayarlar */
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Üst Menü (Navbar) - Flexbox Kullanımı */
+.ust-menu {
+    background-color: #343a40;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.ust-menu nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.ust-menu nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ust-menu nav a:hover {
+    color: #ffc107;
+}
+
+/* Ana İçerik Alanı */
+.icerik-alani {
+    padding: 40px 20px;
+    min-height: 75vh;
+}
+
+/* Ürünleri Yan Yana Dizme (Flexbox) */
+/* Ürünleri Yan Yana Dizme Ana Kutusu */
+.vitrin {
+    display: flex;
+    flex-wrap: wrap; /* Sığmayınca alt satıra at */
+    gap: 20px; /* Aralarındaki boşluk */
+    margin-top: 20px;
+    justify-content: flex-start;
+}
+
+/* Ürün Kartı Tasarımı (4'lü dizilim) */
+.urun-karti {
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 20px 15px;
+    
+    /* 4 tane sığması için genişliği %23 yapıyoruz (boşluk payı bırakarak) */
+    width: 23%; 
+    min-width: 200px; /* Ekran küçülürse daralmasın, aşağı geçsin */
+    
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Üzerine gelme efekti */
+.urun-karti:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Ürün Kartı İçindeki Resim */
+.urun-karti img {
+    width: 65%; /* Resimleri %100'den %65'e düşürerek küçülttük */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Ürün Kartı İçindeki Başlık (Ürün Adı) */
+.urun-karti h3 {
+    font-size: 20px; /* Yazıyı büyüttük */
+    margin-bottom: 10px;
+    color: #2c3e50; /* Yazıya şık koyu bir lacivert tonu verdik */
+}
+
+/* Ürün Kartı İçindeki Fiyat */
+.urun-karti p {
+    font-size: 18px; /* Fiyat yazısını büyüttük */
+    font-weight: bold; /* Fiyatı daha belirgin (kalın) yaptık */
+    color: #e74c3c; /* Fiyatı dikkat çekici bir kırmızımsı tona çevirdik */
+}
+
+/* Alt Bilgi (Footer) */
+.alt-bilgi {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* Ürün Detay Sayfası Tasarımı */
+.urun-detay-kutu {
+    display: flex;
+    gap: 40px;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.urun-resim-buyuk img {
+    width: 350px;
+    border-radius: 5px;
+}
+
+.urun-bilgileri h2 {
+    margin-bottom: 20px;
+}
+
+.urun-bilgileri p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.sepete-ekle-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sepete-ekle-btn:hover {
+    background-color: #218838;
+}
+.sepet-kutusu, .iletisim-formu {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.iletisim-formu label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.iletisim-formu input, .iletisim-formu textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.satin-al-btn, .gonder-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.satin-al-btn:hover, .gonder-btn:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-position: inside;
+}
+/* ANA SAYFA - Karşılama Afişi (Hero) Tasarımı */
+.karsilama-alani {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Şık bir lacivert-mavi renk geçişi */
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.karsilama-alani h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.karsilama-alani p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.alisveris-btn {
+    background-color: #ffc107;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.alisveris-btn:hover {
+    background-color: #e0a800;
+}
+
+.baslik-ayirici {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kılıf Sepeti - İletişim</title>
+    <link rel="stylesheet" href="stiller/style.css">
+</head>
+<body>
+
+    <header class="ust-menu">
+        <div class="logo">
+            <h1>KılıfSepeti</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="urunler.html">Kılıflar</a></li>
+                <li><a href="sepet.html">Sepetim</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="icerik-alani">
+        <h2>Bizimle İletişime Geçin</h2>
+        <p>Soru ve önerileriniz için aşağıdaki formu doldurabilirsiniz.</p>
+        
+        <form class="iletisim-formu">
+            <label>Adınız Soyadınız:</label>
+            <input type="text" id="isim" placeholder="Adınızı giriniz..." required>
+            
+            <label>E-posta Adresiniz:</label>
+            <input type="email" id="eposta" placeholder="ornek@mail.com" required>
+            
+            <label>Mesajınız:</label>
+            <textarea id="mesaj" rows="5" placeholder="Mesajınızı buraya yazınız..." required></textarea>
+            
+            <button type="button" class="gonder-btn" onclick="formKontrol()">Gönder</button>
+        </form>
+    </main>
+
+    <footer class="alt-bilgi">
+        <p>&copy; 2026 Kılıf Sepeti. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="js/myscript.js"></script>
+</body>
+</html>
